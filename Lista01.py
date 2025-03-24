@@ -34,7 +34,7 @@ def ssor():
 def lista():
     nome: input('Digite seu nome:')
     end: input('Digite seu endereço:')
-    num: int(input('Digite seu número de telefone, apenas números:')
+    num: int(input('Digite seu número de telefone, apenas números:'))
     print('nome:'+ nome)
     print('end:'+ end)
     print('num:'+ num)
