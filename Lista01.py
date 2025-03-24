@@ -7,18 +7,36 @@ def q01():
     print('João Paulo')
 
 #2. Faça um programa que imprima o produto dos valores 30 e 27.
-
+def prod():
+    print(30*27)
 #3. Faça um programa que imprima a média aritmética entre os números 5, 8, 12.
-
+def media():
+    print((5+8+12)/3)
 #4. Faça um programa que leia e imprima um número inteiro.
-
+def leia():
+    print(int(input('Digite uma número inteiro'))
 #5. Faça um programa que leia dois números reais e os imprima.
-
+def midia():
+    a = float(input('Digite um número pertecente ao grupo real'))
+    b = float(input('Digite um número pertecente ao grupo real, novamente'))
+    print(a)
+    print(b)
 #6. Faça um programa que leia um número inteiro e imprima o seu
 #   antecessor e o seu sucessor.
-
+def ssor():
+    x = int(input('Digite uma número inteiro'))
+    a = x - 1
+    s = x +1
+    print('seu antecessor:'+ a +'seu sucessor'+s)
 #7. Faça um programa que leia o nome o endereço e o telefone de
 #   um cliente e ao final, imprima esses dados.
+def lista():
+    nome: input('Digite seu nome:')
+    end: input('Digite seu endereço:')
+    num: int(input('Digite seu número de telefone, apenas números:')
+    print('nome:'+ nome)
+    print('end:'+ end)
+    print('num:'+ num)
 
 #8. Faça um programa que leia dois números inteiros e imprima a
 #   subtração deles.
