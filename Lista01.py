@@ -41,19 +41,33 @@ def lista():
 
 #8. Faça um programa que leia dois números inteiros e imprima a
 #   subtração deles.
+def sub():
+    a = int(input('Digite um número inteiro'))
+    b = int(input('Digite um número inteiro, novamente'))
+    print(f'A subtração resultante é {a-b}')
 
 #9. Faça um programa que leia um número real e imprima ¼ deste número.
-
+def umq():
+    x = float(input('Digite um número real'))
+    x = x/4
+    print(f'O resuldado é:{x}')
 #10. Faça um programa que leia três números reais e calcule a
 #    média aritmética destes números. Ao final, o programa deve
 #    imprimir o resultado do cálculo.
-
+def mreal():
+    a = float(input('Digite um número pertecente ao grupo real'))
+    b = float(input('Digite um número pertecente ao grupo real, novamente'))
+    c = float(input('Digite um número pertecente ao grupo real, novamente'))
+    print(f'A média é: {(a+b+c)/3}')
 #11. Faça um programa que leia dois números reais e calcule as
 #    quatro operações básicas entre estes dois números, adição,
 #    subtração,multiplicação e divisão. Ao final, o programa
 #    deve imprimir os resultados dos cálculos.
-
-#12. Faça um programa que leia um número real e calcule o
+def oper():
+    a = float(input('Digite um número'))
+    b = float(input('Digite um número, novamente'))
+    print(f'Adição: {a+b}\n subtração: {a-b}\n Multiplicação: {a*b}\n Divisão: {a/b} ')
+    #12. Faça um programa que leia um número real e calcule o
 #    quadrado deste número. Ao final, o programa deve
 #    imprimir o resultado do cálculo.
 
