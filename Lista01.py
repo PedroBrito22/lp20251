@@ -64,13 +64,16 @@ def mreal():
 #    subtração,multiplicação e divisão. Ao final, o programa
 #    deve imprimir os resultados dos cálculos.
 def oper():
-    a = float(input('Digite um número'))
-    b = float(input('Digite um número, novamente'))
-    print(f'Adição: {a+b}\n subtração: {a-b}\n Multiplicação: {a*b}\n Divisão: {a/b} ')
+    a = float(input('Digite um número: '))
+    b = float(input('Digite um número, novamente: '))
+    print(f' Adição: {a+b}\n subtração: {a-b}\n Multiplicação: {a*b}\n Divisão: {a/b} ')
     #12. Faça um programa que leia um número real e calcule o
 #    quadrado deste número. Ao final, o programa deve
 #    imprimir o resultado do cálculo.
-
+def quad():
+    x = float(input('Digite um número real'))
+    x = x^2
+    print(f'O resuldado é:{x}')
 #13. Faça um programa que leia o saldo de uma conta poupança e
 #    imprima o novo saldo, considerando um reajuste de 2%.
 
