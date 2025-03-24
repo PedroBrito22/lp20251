@@ -14,8 +14,9 @@ def media():
     print((5+8+12)/3)
 #4. Faça um programa que leia e imprima um número inteiro.
 def leia():
-    print(int(input('Digite uma número inteiro'))
+    print(int(input('Digite uma número inteiro')))
 #5. Faça um programa que leia dois números reais e os imprima.
+
 def midia():
     a = float(input('Digite um número pertecente ao grupo real'))
     b = float(input('Digite um número pertecente ao grupo real, novamente'))
