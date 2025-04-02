@@ -53,7 +53,7 @@ def q3():
         print(f'É múltiplo de 3')
     else:
         print(f'Não é múltiplo de 3')
-
+teste
 
 #4. Faça um programa que leia um número e informe se ele é ou não divisível por 5.
 
