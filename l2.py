@@ -49,7 +49,8 @@ def q2():
 #   "É múltiplo de 3"ou "Não é múltiplo de 3".
 def q3():
     x = int(input('Digite um numero'))
-    if (x%3) = 0:
+    c = x % 3
+    if c = 0:
         print(f'É múltiplo de 3')
     else:
         print(f'Não é múltiplo de 3')
@@ -57,14 +58,17 @@ def q3():
 #4. Faça um programa que leia um número e informe se ele é ou não divisível por 5.
 def q4():
     x = int(input('Digite um numero'))
-    if (x%5) = 0:
+    c = x % 5
+    if c = 0:
         print(f'É divisível de 5')
     else:
         print(f'Não é divisível de 5')    
 #5. Faça um programa que leia um número e informe se ele é divisível por 3 e por 7.
 def q5():
     x = int(input('Digite um numero'))
-    if (x%3) = 0 and (x%7) = 0:
+    c = x % 3
+    v = x % 7
+    if c = 0 and v = 0:
         print(f'É divisível de 3 e 7')
     else:
         print(f'Não é divisível de 3 e 7')
