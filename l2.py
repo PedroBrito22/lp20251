@@ -40,9 +40,9 @@ def q2():
     x = int(input('Digite um numero'))
     y = int(input('Digite outro numero'))
     if (x+y) > 20:
-        print(f'é maior de 20, logo, o resultado é'{x+y+8})
+        print(f'é maior de 20, logo, o resultado é {x+y+8}')
     else:
-        print(f'é menor de 20, logo, o resultado é'{x+y-5})
+        print(f'é menor de 20, logo, o resultado é {x+y-5}')
     
 
 #3. Faça um programa que leia um número e imprima uma das duas mensagens:
