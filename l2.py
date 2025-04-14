@@ -53,22 +53,55 @@ def q3():
         print(f'É múltiplo de 3')
     else:
         print(f'Não é múltiplo de 3')
-teste
 
 #4. Faça um programa que leia um número e informe se ele é ou não divisível por 5.
-
+def q4():
+    x = int(input('Digite um numero'))
+    if (x%5) = 0:
+        print(f'É divisível de 5')
+    else:
+        print(f'Não é divisível de 5')    
 #5. Faça um programa que leia um número e informe se ele é divisível por 3 e por 7.
+def q5():
+    x = int(input('Digite um numero'))
+    if (x%3) = 0 and (x%7) = 0:
+        print(f'É divisível de 3 e 7')
+    else:
+        print(f'Não é divisível de 3 e 7')
 
 #6. A prefeitura do Rio de Janeiro abriu uma linha de crédito para os funcionários
 #   estatutários. O valor máximo da prestação não poderá ultrapassar 30% do salário
 #   bruto. Faça um programa que permita entrar com o salário bruto
 #   e o valor da prestação e informar se o empréstimo pode ou não ser concedido.
+def q6():
+    x = input('Digite o seu salário: ')
+    y = input('Digite o valor da prestação: ')
+    tp = 0.3 * x
+    if tp > y :
+        print(f'Não está disponível o crédito devido a prestação ser maior que 30% do seu salário')
+    else:
+        print(f'Linha de crédito disponível') 
 
 #7. Faça um programa que leia um número e indique se o número está compreendido
 #   entre 20 e 50 ou não.
-
+def q7():
+    x = int(input('Digite um numero'))
+    if (x > 20) and (x < 50):
+        print(f'É compreendido entre 20 e 50')
+    else:
+        print(f'Não é compreendido entre 20 e 50')    
 #8. Faça um programa que leia um número e imprima uma das mensagens:
 #   "Maior do que 20", "Igual a 20"ou "Menor do que 20".
+def q7():
+    x = int(input('Digite um numero'))
+    if x > 20 :
+        print(f'É maior que 20')
+    
+    elif x = 20 :
+        print(f'É igual a 20')
+
+    else:
+        print(f'É menor que 20')
 
 #9. Faça um programa que permita entrar com o ano de nascimento da pessoa e com o
 #   ano atual. O programa deve imprimir a idade da pessoa. Não se esqueça de
