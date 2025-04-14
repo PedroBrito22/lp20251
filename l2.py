@@ -50,7 +50,7 @@ def q2():
 def q3():
     x = int(input('Digite um numero'))
     c = x % 3
-    if c = 0:
+    if c == 0:
         print(f'É múltiplo de 3')
     else:
         print(f'Não é múltiplo de 3')
@@ -59,7 +59,7 @@ def q3():
 def q4():
     x = int(input('Digite um numero'))
     c = x % 5
-    if c = 0:
+    if c == 0:
         print(f'É divisível de 5')
     else:
         print(f'Não é divisível de 5')    
@@ -68,7 +68,7 @@ def q5():
     x = int(input('Digite um numero'))
     c = x % 3
     v = x % 7
-    if c = 0 and v = 0:
+    if c == 0 and v == 0:
         print(f'É divisível de 3 e 7')
     else:
         print(f'Não é divisível de 3 e 7')
@@ -101,7 +101,7 @@ def q7():
     if x > 20 :
         print(f'É maior que 20')
     
-    elif x = 20 :
+    elif x == 20 :
         print(f'É igual a 20')
 
     else:
