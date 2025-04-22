@@ -96,7 +96,7 @@ def q7():
         print(f'Não é compreendido entre 20 e 50')    
 #8. Faça um programa que leia um número e imprima uma das mensagens:
 #   "Maior do que 20", "Igual a 20"ou "Menor do que 20".
-def q7():
+def q8():
     x = int(input('Digite um numero'))
     if x > 20 :
         print(f'É maior que 20')
@@ -110,22 +110,104 @@ def q7():
 #9. Faça um programa que permita entrar com o ano de nascimento da pessoa e com o
 #   ano atual. O programa deve imprimir a idade da pessoa. Não se esqueça de
 #   verificar se o ano de nascimento informado é válido.
+ def q9():
+    data_str = input('Data de Nascimento (dd/mm/aaaa): ')
+    data_nascimento = datetime.strptime(data_str, '%d/%m/%Y')
+    if (data_nascimento > HOJE):
+        print('Data inválida! Você nem nasceu ainda.')
+    else:
+        print(f'Idade: {int((HOJE - data_nascimento).days/365)} anos.')
 
 #10. Faça um programa que leia três números inteiros e imprima os três em ordem
 #crescente.
+ def q10():
+    x = int(input('Digite um numero'))
+    y = int(input('Digite um numero'))
+    z = int(input('Digite um numero'))
+    
+    if   x > y and y > z :
+        print(f'{x} > {y} > {z}')
+    
+    elif x > z and z > y :
+        print(f'{x} > {z} > {y}')
+    
+    elif y > x and x > z :
+        print(f'{y} > {x} > {z}')
+    
+    elif y > z and z > x :
+        print(f'{y} > {z} > {x}')
+
+    elif z > x and x > y :
+        print(f'{z} > {x} > {y}')
+
+    elif z > y and y > x :
+        print(f'{z} > {x} > {y}')
+
+    else:
+        print(f'Há números que se repetem, pfvr, faça novamente')
+    
 
 #11. Faça um programa que leia 3 números e imprima o maior deles.
+def q11():
+    x = int(input('Digite um numero'))
+    y = int(input('Digite um numero'))
+    z = int(input('Digite um numero'))
+    
+    if   x > y and y > z :
+        print(f'{x}')
+    
+    elif x > z and z > y :
+        print(f'{x}')
+    
+    elif y > x and x > z :
+        print(f'{y}')
+    
+    elif y > z and z > x :
+        print(f'{y}')
+
+    elif z > x and x > y :
+        print(f'{z}')
+
+    elif z > y and y > x :
+        print(f'{z}')
+
+    else:
+        print(f'Há números que se repetem, pfvr, faça novamente')
 
 #12. Faça um programa que leia a idade de uma pessoa e informe:
 #• Se é maior de idade
 #• Se é menor de idade
 #• Se é maior de 65 anos
+def q12():
+    x = int(input('Digite sua idade'))
+    
+    if   x >= 18 :
+        print(f'Sua idade é maior que 18 anos e menor que 65 anos')
+    
+    elif x < 18   :
+        print(f'Sua idade é menor que 18')
+
+    elif x <= 65  :
+        print(f'Sua idade é menor que 65 e maior que 18')
+    
+    else:
+        print(f'Sua idade é maior de 65 anos')
+
 
 #13. Faça um programa que permita entrar com o nome, a nota da prova 1 e a nota
 #da prova 2 de um aluno. O programa deve imprimir o nome, a nota da prova 1,
 #a nota da prova 2, a média das notas e uma das mensagens: "Aprovado",
 #"Reprovado"ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para
 #reprovação e as demais em prova final).
+def q13():  
+    x = int(input('Digite seu nome'))
+    n1 = int(input('Digite sua nota'))
+    n2 = int(input('Digite sua nota'))
+    media = n1+n2/2
+    if media >= 7 :
+        print(f'Você foi aprovado')
+    
+
 
 #14. Faça um programa que permita entrar com o salário de uma pessoa e imprima o
 #desconto do INSS segundo a tabela seguir:
