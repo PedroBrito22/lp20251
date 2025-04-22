@@ -206,7 +206,10 @@ def q13():
     media = n1+n2/2
     if media >= 7 :
         print(f'Você foi aprovado')
-    
+    elif media < 3 :
+        print(f'Você foi reprovado')
+    else
+        print(f'Você está de PF')
 
 
 #14. Faça um programa que permita entrar com o salário de uma pessoa e imprima o
