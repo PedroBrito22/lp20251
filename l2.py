@@ -110,7 +110,7 @@ def q8():
 #9. Faça um programa que permita entrar com o ano de nascimento da pessoa e com o
 #   ano atual. O programa deve imprimir a idade da pessoa. Não se esqueça de
 #   verificar se o ano de nascimento informado é válido.
- def q9():
+def q9():
     data_str = input('Data de Nascimento (dd/mm/aaaa): ')
     data_nascimento = datetime.strptime(data_str, '%d/%m/%Y')
     if (data_nascimento > HOJE):
@@ -120,7 +120,7 @@ def q8():
 
 #10. Faça um programa que leia três números inteiros e imprima os três em ordem
 #crescente.
- def q10():
+def q10():
     x = int(input('Digite um numero'))
     y = int(input('Digite um numero'))
     z = int(input('Digite um numero'))
@@ -208,7 +208,7 @@ def q13():
         print(f'Você foi aprovado')
     elif media < 3 :
         print(f'Você foi reprovado')
-    else
+    else:
         print(f'Você está de PF')
 
 
@@ -219,10 +219,24 @@ def q13():
 #Maior que R$600,00 e menor ou igual a R$1200,00 20%
 #Maior que R$1200,00 e menor ou igual a R$2000,00 25%
 #Maior que R$2000,00 30%
+def q14():
+    x = int(input('Digite seu salário: '))
+    y = 0
+    y += (x*0.2) if x > 600 and x <= 1200 else 0;
+    y += (x*0.25) if x > 1200 and x <= 2000 else 0;
+    y += (x*0.3) if x > 2000 else 0;
+    print(f'O valor descontado do seu salário é:{y}')
 
 #15. Um comerciante comprou um produto e quer vendê-lo com um lucro de 45% se o
 #valor da compra for menor que R$20,00, caso contrário, o lucro será de 30%.
 #Faça um programa que leia o valor do produto e imprima o valor da venda.
+def q14():
+    x = int(input('Digite o valor do produto: '))
+    y = 0
+    y += (x*0.2) if x < 20 and x <= 1200 else 0;
+    y += (x*0.25) if x > 1200 and x <= 2000 else 0;
+    y += (x*0.3) if x > 2000 else 0;
+    print(f'O valor descontado do seu salário é:{y}')
 
 #16. A confederação brasileira de natação irá promover eliminatórias para o
 #próximo mundial. Faça um programa que receba a idade de um nadador e imprima
@@ -309,3 +323,5 @@ def q13():
 #0,4 1º e 2º grupos
 #0,5 1º, 2º e 3º grupos
 
+questao = int(input('Questão a executar: '))
+eval(f'q{questao}()')
