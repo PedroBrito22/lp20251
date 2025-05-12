@@ -23,19 +23,31 @@ def exemploEnquanto():
         print('Fim!') #nunca é executado, já que x nunca é >= 10
 
 #1.Faça um programa que imprima todos os números de 1 até 100.
-    def q1():
-    for 0 in 100:
-        print(x+1)
+def q1():
+    for x in range(1,101):
+        print(x, end=' ')
     
-
-
 #2. Faça um programa que imprima todos os números pares de 100 até 1.
-
+def q2():
+    for x in range(100,0,-2):
+        print(x, end=' ')
 #3. Faça um programa que imprima os múltiplos de 5, no intervalo de 1 até 500.
-
+def q3():
+    for x in range(0,505,5):
+        print(x, end=' ')
 #4. Faça um programa que permita entrar com o nome, a idade e o sexo de 20
 #pessoas.O programa deve imprimir o nome da pessoa se ela for do sexo masculino
 #e tiver mais de 21 anos.
+def q4():
+    lista = " "
+    for x in range(0,4):
+        nome = input('Nome: ')
+        idade = int(input('Idade: '))
+        sexo = input('Sexo: ').upper()[0]
+    if sexo == 'M' and idade > 21:
+        lista = nome + lista
+    if sexo == 'M' and idade > 21:
+        print(f'Lista das pessoas permitidas pra fumar:{lista}')
 
 #5. Sabendo-se que a unidade lógica e aritmética calcula o produto através de somas
 #sucessivas, crie um programa que calcule o produto de dois números inteiros
