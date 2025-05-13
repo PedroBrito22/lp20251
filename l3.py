@@ -40,26 +40,39 @@ def q3():
 #e tiver mais de 21 anos.
 def q4():
     lista = " "
-    for x in range(0,4):
+    for x in range(1,5):
         nome = input('Nome: ')
         idade = int(input('Idade: '))
         sexo = input('Sexo: ').upper()[0]
-    if sexo == 'M' and idade > 21:
-        lista = nome + lista
-    if sexo == 'M' and idade > 21:
-        print(f'Lista das pessoas permitidas pra fumar:{lista}')
+        if sexo == 'M' and idade > 21:
+            lista += nome
+    if x == 4:
+     print(f'Lista das pessoas permitidas pra fumar:{lista}/n')
 
 #5. Sabendo-se que a unidade lógica e aritmética calcula o produto através de somas
 #sucessivas, crie um programa que calcule o produto de dois números inteiros
 #lidos. Suponha que os números lidos sejam positivos.
-
+def q5():
+    Num1 = int(input('Digite um numero: '))
+    Num2 = int(input('Digite outro numero: '))
+    for x in range(0,num2):
+        rest = num1 + rest
+    print(f'O resultado do calculo é:{rest}')
 #6. Crie um programa que imprima os 20 primeiros termos da série de Fibonacci.
 #Observação: os dois primeiros termos desta série são 1 e 1 e os demais são gerados
 #a partir da soma dos anteriores. Exemplo:
 #• 1 + 1 = 2, terceiro termo;
 #• 1 + 2 = 3, quarto termo, etc.
 # 1 1 2 3 5 8 13 21
-
+def q6():
+    x = 1
+    y = 0
+    z = 0
+    for j in range(0,20):
+        z = x
+        x = y
+        y = x + z  
+        print( x )
 #7. Crie um programa que permita entrar com o nome, a nota da
 #prova 1 e da prova 2 de 15 alunos. Ao final, imprimir uma listagem, contendo:
 #nome, nota da prova 1, nota da prova 2, e média das notas de cada aluno. Ao final,
