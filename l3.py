@@ -82,8 +82,8 @@ def q7():
     mediaf = 0
     for x in range(0,4):
         nome = input('Digite o nome: ')
-        nota1 = int(input('Digite a nota da prova 01: '))
-        nota2 = int(input('Digite a nota da prova 02: '))
+        nota1 = float(input('Digite a nota da prova 01: '))
+        nota2 = float(input('Digite a nota da prova 02: '))
         media = (nota1 + nota2) / 2
         mediaf += media  
         lista += (f'Aluno: {nome}\nNota da primeira prova:{nota1}\nNota da segunda prova:{nota2}\nA média do aluno:{media}\n')
@@ -97,7 +97,23 @@ def q7():
 #Salário menor que R$1300,00 Isento
 #Salário maior ou igual a R$1300,00 e menor que R$2300,00 10% do salário bruto
 #Salário maior ou igual a R$2300,00 15% do salário bruto
-
+def q8():
+    lista = ""
+    w = ''
+    v = 0
+    y = 0
+    for z in range(0,3):
+        v = 0
+        w = input('Digite seu nome: ')
+        x = int(input('Digite seu salário: '))
+        v = 1 if x < 1300 else 0;
+        y = (x*0.10) if (x >= 1300 and x < 2300) else 0;
+        y += (x*0.15) if x > 2300 else 0;
+        if v == 1:
+            lista += (f'\nO Sr(a).{w}\nVocê está isento\n')
+        else:
+            lista += (f'\nO Sr(a).{w}\nO valor descontado do seu salário é:{y}\n')
+    print(lista)
 #9. No dia da estreia do filme "Procurando Dory", uma grande emissora de TV realizou
 #uma pesquisa logo após o encerramento do filme. Cada espectador respondeu
 #a um questionário no qual constava sua idade e a sua opinião em relação ao filme:
@@ -107,7 +123,17 @@ def q7():
 #• A quantidade de pessoas que responderam regular;
 #• A percentagem de pessoas que responderam bom entre todos os expectadores
 #analisados.
-
+def q9():
+    for _ in range(0,4):
+        nome = input('Digite seu nome: ')
+        ida = int(input('Digite sua idade: '))
+        op = input('Na sua opnião, o que achou do filme:\n1 - Regular\n1 - Bom\n 3- Excelente')
+        somaida += ida if op == 3 else 0
+        reg += 1 if op == 1 else 0;
+        bom += 1 if op == 2 else 0 
+    print(f'A média das idades das pessoas que responderam excelente:\t {somaida/4}')
+    print(f'A quantidade de pessoas que responderam regular:\t {reg}')
+    print(f'A percentagem de pessoas que responderam bom entre todos os expectadores analisados:\t {(bom*100)/4}')
 #10. Em um campeonato Europeu de Volleyball, se inscreveram 30 países. Sabendo-se
 #que na lista oficial de cada país consta, além de outros dados, peso e idade de 12
 #jogadores, crie um programa que apresente as seguintes informações:
