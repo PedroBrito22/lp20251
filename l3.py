@@ -124,10 +124,13 @@ def q8():
 #• A percentagem de pessoas que responderam bom entre todos os expectadores
 #analisados.
 def q9():
+    somaida = 0
+    reg = 0
+    bom = 0
     for _ in range(0,4):
         nome = input('Digite seu nome: ')
         ida = int(input('Digite sua idade: '))
-        op = input('Na sua opnião, o que achou do filme:\n1 - Regular\n1 - Bom\n 3- Excelente')
+        op = input('Na sua opnião, o que achou do filme:\n1 - Regular\n2 - Bom\n3- Excelente\n\n')
         somaida += ida if op == 3 else 0
         reg += 1 if op == 1 else 0;
         bom += 1 if op == 2 else 0 
