@@ -127,16 +127,18 @@ def q9():
     somaida = 0
     reg = 0
     bom = 0
+    cont = 0
     for _ in range(0,4):
         nome = input('Digite seu nome: ')
         ida = int(input('Digite sua idade: '))
-        op = input('Na sua opnião, o que achou do filme:\n1 - Regular\n2 - Bom\n3- Excelente\n\n')
-        somaida += ida if op == 3 else 0
+        op = int(input('Na sua opnião, o que achou do filme:\n1 - Regular\n2 - Bom\n3- Excelente\n\n'))
+        somaida += ida if op == 3 else 0;
+        cont += 1 if op == 3 else 0;
         reg += 1 if op == 1 else 0;
-        bom += 1 if op == 2 else 0 
-    print(f'A média das idades das pessoas que responderam excelente:\t {somaida/4}')
-    print(f'A quantidade de pessoas que responderam regular:\t {reg}')
-    print(f'A percentagem de pessoas que responderam bom entre todos os expectadores analisados:\t {(bom*100)/4}')
+        bom += 1 if op == 2 else 0;
+    print(f'A média das idades das pessoas que responderam excelente: {somaida/cont}')
+    print(f'A quantidade de pessoas que responderam regular: {reg}')
+    print(f'A percentagem de pessoas que responderam bom entre todos os expectadores analisados: {(bom*100)/4}')
 #10. Em um campeonato Europeu de Volleyball, se inscreveram 30 países. Sabendo-se
 #que na lista oficial de cada país consta, além de outros dados, peso e idade de 12
 #jogadores, crie um programa que apresente as seguintes informações:
@@ -145,7 +147,26 @@ def q9():
 #• O atleta mais pesado de cada time;
 #• O atleta mais jovem de cada time;
 #• O peso médio e a idade média de todos os participantes.
-    
+def q9():
+    somaida = 0
+    reg = 0
+    bom = 0
+    cont = 0
+    jovem = 99
+    pesado = 10
+    lsita = " "
+    for _ in range(0,3):
+        nomet = input('Digite seu nome do time: ')
+        for _ in range(0,4):
+            nomej = input('Digite o nome do jogador: ')
+            ida = int(input('Digite a idade: '))
+            peso = int(input('Digite o peso: '))
+            somaida += ida
+            somapeso += peso
+            jovem = ida if jovem < ida else jovem;
+            pesado = peso if peso < pesado else pesado;
+        lista += (f'Time: {nomet}\tNome do jogador:{nomej}\tPeso do jogador:{peso}')
+
 #11. Construa um programa que leia vários números e informe quantos números
 #entre 100 e 200 foram digitados. Quando o valor 0 (zero) for lido, o algoritmo
 #deverá cessar sua execução.
