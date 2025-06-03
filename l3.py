@@ -149,15 +149,18 @@ def q9():
 #• O peso médio e a idade média de todos os participantes.
 def q10():
     somaida = 0
+    somapeso = 0
     reg = 0
     bom = 0
     cont = 0
+    somidag = 0
+    sompesg = 0
     jovem = 99
     pesado = 10
     lista = " "
     for _ in range(0,3):
         nomet = input('Digite seu nome do time: ')
-        for _ in range(0,4):
+        for _ in range(0,3):
             nomej = input('Digite o nome do jogador: ')
             ida = int(input('Digite a idade: '))
             peso = int(input('Digite o peso: '))
@@ -166,9 +169,7 @@ def q10():
             jovem = ida if jovem < ida else jovem;
             pesado = peso if peso < pesado else pesado;
             lista += (f'Time: {nomet}\tNome do jogador:{nomej}\tIdade: {ida}\tPeso do jogador:{peso}')
-        lista += (f'''O peso médio do time: {somapeso/4}
-        A idade médio do time: {somaida/4}
-        O atleta mais pesado do time: {pesado}\tO atleta mais jovem do time: {jovem}''')
+        lista += (f'O peso médio do time: {somapeso/3}\tA idade médio do time: {somaida/3}\nO atleta mais pesado do time: {pesado}\tO atleta mais jovem do time: {jovem}')
         somidag += somaida
         sompesg += somapeso
         somaida = 0
