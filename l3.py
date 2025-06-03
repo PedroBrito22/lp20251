@@ -147,14 +147,14 @@ def q9():
 #• O atleta mais pesado de cada time;
 #• O atleta mais jovem de cada time;
 #• O peso médio e a idade média de todos os participantes.
-def q9():
+def q10():
     somaida = 0
     reg = 0
     bom = 0
     cont = 0
     jovem = 99
     pesado = 10
-    lsita = " "
+    lista = " "
     for _ in range(0,3):
         nomet = input('Digite seu nome do time: ')
         for _ in range(0,4):
@@ -165,7 +165,16 @@ def q9():
             somapeso += peso
             jovem = ida if jovem < ida else jovem;
             pesado = peso if peso < pesado else pesado;
-        lista += (f'Time: {nomet}\tNome do jogador:{nomej}\tPeso do jogador:{peso}')
+            lista += (f'Time: {nomet}\tNome do jogador:{nomej}\tIdade: {ida}\tPeso do jogador:{peso}')
+        lista += (f'''O peso médio do time: {somapeso/4}
+        A idade médio do time: {somaida/4}
+        O atleta mais pesado do time: {pesado}\tO atleta mais jovem do time: {jovem}''')
+        somidag += somaida
+        sompesg += somapeso
+        somaida = 0
+        somapeso = 0
+    for _ in range(0,3):        
+        print(lista)
 
 #11. Construa um programa que leia vários números e informe quantos números
 #entre 100 e 200 foram digitados. Quando o valor 0 (zero) for lido, o algoritmo
