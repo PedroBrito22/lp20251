@@ -1,4 +1,5 @@
 import random
+from biblioteca import input_int, input_float
 '''
 Lista de Exercícios referentes a coleções e arquivos em python
 '''
@@ -37,19 +38,49 @@ def q2():
 # para a geração de uma senha aleatória. Ao final o programa deve exibir a
 # senha sugerida. (ASCII 40-126)
 def q21():
-    qtde = input_int('Qtde de caracteres para a senha: ',8,20))
-    senha = []
+    qtde = input_int('Qtde de caracteres para a senha: ',8,20)
+    senha = ''
     for _ in range(qtde):
-        senha += (chr(random.randrange(40,127)))
-    print(senha)
+        senha += (chr(random.randrange(40,127))) 
+    print(f'Sua senha gerada é: {senha}')
 #3. Construa uma programa que armazene 15 números em uma lista e imprima
 #uma listagem numerada contendo o número e uma das mensagens: par ou ímpar.
-
-
+def q3():
+    num = []
+    mod = []
+    x = 0
+    y = 0
+    lista = ''
+    for x in range(15):
+        num.append(random.randrange(0,50))
+        mod.append(num[x] % 2)
+    for y in range(15):    
+        if mod[y] == 0:
+            lista += (f'{num[y]} é par\n')
+        else:
+            lista += (f'{num[y]} é impar\n')
+    print(lista)
 
 #4. Faça um programa que armazene 8 números em uma lista e imprima todos os
 #números. Ao final, imprima o total de números múltiplos de seis.
-
+def q4():
+    x = 0
+    z = 0
+    num = []
+    mult = []    
+    lista = ''
+    for x in range(8):
+        num.append(random.randrange(0,100))
+        mult.append(num[x]%6)
+    x = 0
+    for x in range(8):
+        if mult[x] == 0:
+            z += 1
+            lista += (f'{num[x]}, ')
+    x = 0
+    for x in range(8):
+        print(num[x])
+    print(f'Quantos números são multiplos de 6? {z}\nOs números são:{lista}')
 #5. Faça um programa que armazene as notas das provas 1 e 2 de 15 alunos. Calcule
 #e armazene a média arredondada. Armazene também a situação do aluno: 1-
 #Aprovado ou 2-Reprovado. Ao final o programa deve imprimir uma listagem
