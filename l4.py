@@ -81,27 +81,100 @@ def q4():
     for x in range(8):
         print(num[x])
     print(f'Quantos números são multiplos de 6? {z}\nOs números são:{lista}')
+
 #5. Faça um programa que armazene as notas das provas 1 e 2 de 15 alunos. Calcule
 #e armazene a média arredondada. Armazene também a situação do aluno: 1-
 #Aprovado ou 2-Reprovado. Ao final o programa deve imprimir uma listagem
 #contendo as notas, a média e a situação de cada aluno em formato tabulado.
 #Utilize quantas listas forem necessárias para armazenar os dados.
-
+def q5():
+    nomes = ['Pedro','Lucas','Breno','Eduardo','Jorge','Cacio']
+    n1 = [8.4,5.6,4.6,7,10,2.6]
+    n2 = [5.8,3,8,4,6,8.3]
+    x = 0
+    boletim = ''
+    for x in range(6):
+        if ((n1[x]+n2[x])/2) >= 6:
+            boletim += (f'{nomes[x]}\t{n1[x]}\t{n2[x]}\t APROVADO\n')
+        else:
+            boletim += (f'{nomes[x]}\t{n1[x]}\t{n2[x]}\t REPROVADO\n')
+    print(boletim)
+    
 #6. Construa um programa que permita armazenar o salário de 20 pessoas. Calcular
 #e armazenar o novo salário sabendo-se que o reajuste foi de 8%. Imprimir uma
 #listagem numerada com o salário e o novo salário. Declare quantas listas forem
 #necessárias.
-
+def q6():
+    sal = []
+    nomes = ['Pedro','Lucas','Breno','Eduardo','Jorge','Cacio','Tiago','Otavio','Leon','Zelia']
+    holerite = ''
+    for _ in range(10):
+        sal.append(random.randrange(1500,3000))
+    for x in range(10):
+        holerite += (f'{nomes[x]}\t\t{sal[x]}\t\t{sal[x]*0.08+sal[x]}\n')
+    print(f'Nome:\t\tSalário Ant.\tSalário At.\n')
+    print(holerite)
 #7. Crie um programa que leia o preço de compra e o preço de venda de 100 mercadorias
 #(utilize listas). Ao final, o programa deverá imprimir quantas mercadorias
 #proporcionam:
 #• lucro < 10%
 #• 10% <= lucro <= 20%
 #• lucro > 20%
+def q7():
+    pcompra = []
+    pvenda = []
+    nomes = ['Pedro','Lucas','Breno','Eduardo','Jorge','Cacio','Tiago','Otavio','Leon','Zelia']
+    lista10 = ''
+    lista20 = ''
+    lista99 = ''
+    for _ in range(10):
+        pcompra.append(random.randrange(100,1000))
+    for x in range(10):
+        pvenda.append(pcompra[x]+random.randrange(200,500))
+    for x in range(10):
+        lucro = (pvenda[x]*100/pcompra[x])-100
+        if lucro < 10:
+            lista10 += (f"{nomes[x]} teve lucro de {"{:.2f}".format(lucro)}%\n")
+        elif lucro >= 20:
+            lista20 += (f"{nomes[x]} teve lucro de {"{:.2f}".format(lucro)}%\n")
+        elif lucro > 20:
+            lista99 += (f"{nomes[x]} teve lucro de {"{:.2f}".format(lucro)}%\n")
+    print(f'COMPRA\tVENDA')
+    for x in range(10):
+        print(f'{pcompra[x]}\t{pvenda[x]}')
+    print(lista10)
+    print(lista20)
+    print(lista99)   
 
 #8. Construa um programa que armazene o código, a quantidade, o valor de compra
 #e o valor de venda de 30 produtos. A listagem pode ser de todos os produtos ou
 #somente de um ao se digitar o código. Utilize dicionário como estrutura de dados.
+def q8():
+    cod = []
+    pcompra = []
+    pvenda = []
+    dic = dict()
+    nomes = ['Pedro','Lucas','Breno','Eduardo','Jorge','Cacio','Tiago','Otavio','Leon','Zelia']
+    cod = [5166,6516,6598,8417,8245,6829,7985,5218,1258,4268]
+    lista = ''
+    for x in range(10):
+        pcompra.append(random.randrange(100,1000))
+        pvenda.append(pcompra[x]+random.randrange(200,500))
+        lista += (f'{cod[x]}\t{nomes[x]}\t{pcompra[x]}\t{pvenda[x]}\n')
+        dic[cod[x]] = (f'{nomes[x]}\t{pcompra[x]}\t{pvenda[x]}')
+    esc = input(f'Você deseja pesquisar o seu produto ? s/n\n')
+    if esc == 's':
+        resp = input_int(f'Digite o código do produto: ',0,9999)
+        print(f'Nome\tCompra\tVenda')
+        print(dic[resp])
+    elif esc == 'n':
+        print(f'Código\tNome\tCompra\tVenda')
+        print(lista)
+    else:
+        print(f'Comando Invalido')
+    
+    
+
 #9. Faça um programa que leia dois conjuntos de números inteiros, tendo
 #cada um 10 elementos. Ao final o programa deve listar os elementos comuns aos
 #conjuntos.
